@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<headl>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eze Uchenna Felix Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skill">Skills</a>
+  <a href="#project">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+<header id="home">
+  <img src="a.jpg" alt="Emmanuel Ayomide" class="profile-img">
+  <h1>Eze Uchenna Felix</h1>
+  <p>Web Developer | Graphic Designer | Network Engineer | IT Operator</p>
+  <a href="#contact" class="btn">Hire Me</a>
+</header>
+<hr>
+<section id="about" class="section reveal">
+  <h2>About Me</h2>
+  <p>
+    I am a results-driven professional with extensive experience in Web Development, Graphic Design, Network Engineering, and IT Operations. I focus on delivering modern, responsive, and secure digital solutions that enhance user experiences and optimize business processes.
+  </p>
+  <p>
+    Over the past <mark>9 MONTHS</mark>, I have honed my expertise in website creation, multimedia production, secure network setup, and IT systems management. My approach combines creativity, technical skill, and strategic thinking to deliver reliable, high-quality digital solutions.
+  </p>
+  <p>
+    I am passionate about staying up-to-date with emerging technologies and design trends. I thrive in challenging environments where I can innovate and contribute to building solutions that make a tangible impact.
+  </p>
+</section>
+
+
+<section id="skill" class="section">
+  <h2>Skills</h2>
+  <div class="skill-grid">
+    <div class="skill reveal">
+      <h3>Web Development</h3>
+      <p>HTML, CSS, JavaScript, React.js, Node.js, Responsive Design, UI/UX Optimization</p>
+      <p>Building user-friendly websites with clean code and modern frameworks, ensuring fast performance and accessibility.</p>
+    </div>
+    <div class="skill reveal">
+      <h3>Graphic Design</h3>
+      <p>Photoshop, Illustrator, Canva, Branding, Logo Design, Motion Graphics</p>
+      <p>Creating visually compelling designs for digital and print media, aligning visuals with brand identity.</p>
+    </div>
+    <div class="skill reveal">
+      <h3>Network Engineering</h3>
+      <p>Network Configuration, VPN, LAN/WAN Optimization, Security</p>
+      <p>Designing, configuring, and maintaining secure and reliable networks for personal and business environments.</p>
+    </div>
+    <div class="skill reveal">
+      <h3>IT Operations</h3>
+      <p>System Administration, IT Support, Hardware & Software Maintenance</p>
+      <p>Managing IT systems and infrastructure, troubleshooting technical issues, and ensuring smooth operations.</p>
+    </div>
+  </div>
+</section>
+
+<hr>
+<section id="project" class="section">
+  <h2>Projects</h2>
+  <div class="project-grid">
+    <div class="project reveal">
+      <h3>Portfolio Website</h3>
+      <p>A fully responsive personal portfolio highlighting web development, graphic design, and multimedia projects. Focused on clean UI, fast performance, and user experience.</p>
+      <div class="project-btn">Explore Project</div>
+    </div>
+    <div class="project reveal">
+      <h3>Business Website</h3>
+      <p>Developed a secure, optimized website for a brand, integrating user-friendly design with network security and performance optimization.</p>
+      <div class="project-btn">Explore Project</div>
+    </div>
+    <div class="project reveal">
+      <h3>Design Collection</h3>
+      <p>A collection of logos, social media graphics, banners, and motion graphics, showcasing creativity and branding expertise.</p>
+      <div class="project-btn">Explore Project</div>
+    </div>
+    <div class="project reveal">
+      <h3>IT & Network Management</h3>
+      <p>Managed and optimized secure network systems and IT operations, ensuring reliability, efficiency, and smooth technical workflows.</p>
+      <div class="project-btn">Explore Project</div>
+    </div>
+  </div>
+</section>
+<hr>
+<section id="contact" class="section reveal">
+  <h2>Contact Me</h2>
+  <p>For Any Available Computer Job</p>
+  <h2>Email:</h2>
+  <p> Felix.melvin008@email.com</p>
+  <h2>call</h2>
+  <p>+2348060478848</p>
+  <p>You Can Also Click The  Chat Button</p>
+  <a href="https://wa.me/2348060478848" class="btn">Chat on WhatsApp</a>
+</section>
+
+<footer>
+  <p>© 2026 by Felix| ICT </p>
+</footer>
+
+<script>
+  // Scroll Reveal
+  function reveal() {
+    const elements = document.querySelectorAll(".reveal");
+    elements.forEach(el => {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      const visiblePoint = 100;
+      if (elementTop < windowHeight - visiblePoint) {
+        el.classList.add("active");
+      }
+    });
+  }
+  window.addEventListener("scroll", reveal);
+
+  // Clickable grid effect
+  const gridItems = document.querySelectorAll(".skill, .project");
+  gridItems.forEach(item => {
+    item.addEventListener("click", () => {
+      gridItems.forEach(i => i.classList.remove("active"));
+      item.classList.add("active");
+    });
+  });
+</script>
+
+</body>
+</html>
